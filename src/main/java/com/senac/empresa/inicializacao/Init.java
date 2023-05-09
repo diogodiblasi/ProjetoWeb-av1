@@ -29,15 +29,18 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 		
 		Empresa empresa1 = new Empresa();
 		empresa1.setNome("Senac");
+		empresaService.salvar(empresa1);
 		
 		Devedor devedor1 = new Devedor();
 		devedor1.setNome("Senac1");
+		devedorService.salvar(devedor1);
 		
 		
 		Divida divida1 = new Divida();
 		divida1.setValor(200);
 		divida1.setEmpresa(empresa1);
 		divida1.setDevedor(devedor1);
+		dividaService.salvar(divida1);
 		
 		
 		
